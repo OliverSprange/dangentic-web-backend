@@ -5,7 +5,8 @@
   "scripts": {
     "build": "keystone build",
     "dev": "keystone dev",
-    "start": "keystone start --with-migrations"
+    "start": "keystone start",
+    "deploy": "keystone postinstall && keystone prisma migrate deploy && keystone start"
   },
   "dependencies": {
     "@keystone-6/core": "^6.4.1",

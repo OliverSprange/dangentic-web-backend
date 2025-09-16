@@ -2,7 +2,7 @@
 builder = "nixpacks"
 
 [deploy]
-startCommand = "keystone postinstall && keystone start --with-migrations"
+startCommand = "npm run deploy"
 healthcheckPath = "/"
 healthcheckTimeout = 300
 restartPolicyMaxRetries = 10
