@@ -20,12 +20,12 @@ export default config({
       storagePath: 'public/images',
     },
   },
-  session: {
-    // Simple session for now - can be enhanced later
-    strategy: 'jwt',
-    secret: process.env.SESSION_SECRET || 'default-dev-secret-change-in-production',
-    maxAge: 60 * 60 * 24 * 30, // 30 days
-  },
+  // Remove session configuration for now to fix the error
+  // session: {
+  //   strategy: 'jwt',
+  //   secret: process.env.SESSION_SECRET || 'default-dev-secret-change-in-production',
+  //   maxAge: 60 * 60 * 24 * 30, // 30 days
+  // },
   server: {
     cors: {
       origin: [
@@ -48,6 +48,6 @@ export default config({
     },
   },
   ui: {
-    isAccessAllowed: () => true, // Customize this for production
+    isAccessAllowed: () => true,
   },
 });
