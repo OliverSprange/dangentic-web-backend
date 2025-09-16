@@ -3,6 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
+    "build": "keystone build",
     "dev": "keystone dev",
     "start": "keystone start --with-migrations"
   },
