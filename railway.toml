@@ -3,7 +3,7 @@ builder = "nixpacks"
 
 [deploy]
 startCommand = "keystone postinstall && keystone start --with-migrations"
-healthcheckPath = "/api/graphql"
+healthcheckPath = "/"
 healthcheckTimeout = 300
 restartPolicyMaxRetries = 10
 
