@@ -31,11 +31,12 @@ export default config({
       origin: [
         process.env.FRONTEND_URL || 'http://localhost:3000',
         'https://*.vercel.app',
-        'https://vercel.app'
+        'https://vercel.app',
+        'https://*.railway.app'
       ],
       credentials: true,
     },
-    port: process.env.PORT ? parseInt(process.env.PORT) : 3001,
+    port: process.env.PORT ? parseInt(process.env.PORT) : 8080,
   },
   graphql: {
     debug: process.env.NODE_ENV !== 'production',
@@ -43,6 +44,7 @@ export default config({
     playground: process.env.NODE_ENV !== 'production',
     apolloConfig: {
       introspection: true,
+      csrfPrevention: false,
     },
   },
   ui: {
